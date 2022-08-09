@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contenido_que_cambia %}
+
+{% for item in refreshment %}
+
+<div class="card" style="width: 18rem;">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lafruteria.cl%2Fwp-content%2Fuploads%2F2020%2F06%2F7801610002193.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">${{item.price}}</p>
+      <p class="card-text">{{item.gallons}}lts</p>
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+  </div>
+
+
+{% endfor %}
+
+{% endblock %}
+
+
+
+

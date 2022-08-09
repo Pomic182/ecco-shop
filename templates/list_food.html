@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block contenido_que_cambia %}
+
+{% for item in foods %}
+
+<div class="card" style="width: 18rem;">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvivanda.vteximg.com.br%2Farquivos%2Fids%2F169730-1000-1000%2F958977.jpg%3Fv%3D636141523865700000&f=1&nofb=1" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">${{item.price}}</p>
+      <p class="card-text">{{item.kilos}}kg</p>
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+  </div>
+
+
+{% endfor %}
+
+{% endblock %}

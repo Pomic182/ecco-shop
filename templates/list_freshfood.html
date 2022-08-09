@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block contenido_que_cambia %}
+
+{% for item in freshfoods %}
+
+<div class="card" style="width: 18rem;">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnectarfruit.es%2Fwp-content%2Fuploads%2F2020%2F05%2F2.-Manzana-starking.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">${{item.price}}</p>
+      <p class="card-text">{{item.kilos}}lts</p>
+      <p class="card-text">{{item.rottendays}} Vto</p>
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+  </div>
+
+
+{% endfor %}
+
+{% endblock %}

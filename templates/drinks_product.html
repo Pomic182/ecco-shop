@@ -1,3 +1,15 @@
-<h1>el producto se llama {{drinks_product.name}}</h1>
-<h1>a un precio de $ {{drinks_product.price}}</h1>
-<h1>contiene {{drinks_product.gallons}} litros </h1>
+{% extends 'base.html' %}
+
+{% block contenido_que_cambia %}
+
+<form action="" method="POST">
+{% csrf_token %}
+
+<table>
+
+    {{form.as_table}}
+
+</table>
+
+</form>
+{% endblock %}

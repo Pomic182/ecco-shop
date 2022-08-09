@@ -1,4 +1,16 @@
-<h1>el nombre del producto es {{freshfood_product.name}}</h1>
-<h1>a un precio de $ {{freshfood_product.price}}</h1>
-<h1>con un peso de {{freshfood_product.kilos}} kilos</h1>
-<h1>consumir preferemente antes de los {{freshfood_product.rottenday}} días</h1>
+{% extends 'base.html' %}
+
+{% block contenido_que_cambia %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+<table>
+    {{forms.as_table}}
+    </table>
+
+<p><input type="submit" value="Enviar"></p>
+
+</form>
+
+{% endblock %}
